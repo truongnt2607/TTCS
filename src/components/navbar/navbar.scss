@@ -1,0 +1,182 @@
+.nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .search{
+        transition: 0.3s ease-in-out;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background-color: transparent;  
+        top: 0;
+        right: -100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .search__box {
+            width: 70%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--white);
+            background-color: transparent;
+            .search__box__input {
+                flex: 1;
+                width: 90%;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: var(--white);
+                &::placeholder {
+                    color: var(--white);
+                }
+            }
+            .search__box__close {
+                color: var(--white);
+                cursor: pointer;
+            }
+        }
+    }
+    .search--active {
+        right: 0%;
+    }
+    .nav__container {
+        transition: 0.5s ease-in;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        height: 60px;
+        background-color: transparent;  
+        .nav__left {
+            display: flex;
+            column-gap: 30px;
+            align-items: center;
+            .nav__logo {
+                cursor: pointer;
+                margin: auto 0px;
+                height: 30px;
+            }
+            .nav__list {
+                .nav__page {
+                    display: flex;
+                    margin: auto 0;
+                    list-style: none;
+                    li {
+                        margin-right: 30px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        .tab {
+                            color: var(--white);
+                            &:hover {
+                                color: var(--green);
+                            }
+                            text-decoration: none;
+                            :visited, :active {
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav__close {
+            display: none;
+        }
+        .nav__actions {
+            margin: auto 0;
+            display: flex;
+            column-gap: 16px;
+            .nav__actions__menu {
+                display: none;
+            }
+            .nav__actions__search {
+                .nav__actions__search__icon {
+                    color: var(--white);
+                }
+                cursor: pointer;
+            }
+        }
+    }
+    .nav__container--active {
+        display: none;
+    }
+    .nav__container--onScroll {
+        display: flex;
+        background-color: var(--black);
+    }
+}
+.nav-active {
+    .search {
+        background-color: var(--black);
+    }
+    .nav__container {
+        background-color: var(--black);
+    }
+}
+@media screen and (max-width: 1023px){
+    .nav {
+        .nav__container {
+            .nav__logo {
+                img {
+                    height: 30px;
+                }
+            }
+            .nav__actions{
+                .nav__actions__menu {
+                    color: var(--white);
+                    display: block;
+                    cursor: pointer;
+                }
+                .nav__actions__search {
+                    .nav__actions__search__icon {
+                        color: var(--white);
+                    }
+                }
+            }
+            .nav__list {
+                transition: ease-in-out 0.5s;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                position: fixed;
+                top: -120%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark);
+                .nav__page {   
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 24px;
+                    text-align: center  ;
+                    li {
+                        padding-right: 0px;
+                        &:hover {
+                            color: rgb(31, 94, 55);
+                        }
+                    }
+                }
+                .nav__close {
+                    position: absolute;
+                    top: 18px;
+                    right: 20px;
+                    color: var(--white);
+                }
+            }
+            .nav__list-active {
+                .nav__close {
+                    color: var(--white);
+                    display: block;
+                    cursor: pointer;
+                }
+                top: 0;
+            }
+         }
+    }
+}
+
