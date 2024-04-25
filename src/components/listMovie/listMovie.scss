@@ -1,5 +1,6 @@
 .list-container {
-    margin: 0 80px;
+    width: 90%;
+    margin: 0 auto;
     padding-bottom: 50px;
 
     .list-title {
@@ -16,8 +17,8 @@
 
         .list-item {
             width: calc((100% - 20px*5)/6);
-            padding-bottom: 20px;
-            margin-bottom: 50px;
+            height: 500px;
+            margin-bottom: 80px;
             transform: scale(1);
             transition: 0.5s ease-in-out;
 
@@ -35,6 +36,7 @@
                 .item-status {
                     position: absolute;
                     color: var(--white);
+                    font-size: 1.3rem;
                     bottom: 3%;
                     left: 5%;
                 }
@@ -43,7 +45,7 @@
             .movie-title {
                 color: var(--white);
                 margin-top: 10px;
-                font-size: 18px;
+                font-size: 1.5rem;
             }
 
             &:hover {
@@ -61,20 +63,39 @@
 @media screen and (max-width: 1025px) {
     .list-container {
         margin: 0 20px;
+
         .list-wapper {
+            gap: 10px;
+
             .list-item {
                 width: calc((100% - 20px*3)/4);
+                height: 350px;
+
+                .item-img {
+                    object-fit: scale-down;
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     .list-container {
-        margin: 0 20px;
         .list-wapper {
             .list-item {
                 width: calc((100% - 20px*1)/2);
+                height: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .list-container {
+        .list-wapper {
+            .list-item {
+                width: calc((100% - 20px*2)/3);
+                height: 150px;
             }
         }
     }

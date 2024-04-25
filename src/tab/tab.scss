@@ -1,13 +1,6 @@
 .tab-container {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 60px;
+    width: 100%;
+    height: max-content;
+    padding-top: 150px;
     background-color: var(--red);
-    color: var(--white);
-    .list {
-        padding-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 20px;
-    }
 }

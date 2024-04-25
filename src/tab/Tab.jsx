@@ -1,32 +1,19 @@
 import React from 'react'
 import './tab.scss';
-import Item from '../components/item/Item';
+import ListMovie from '../components/listMovie/ListMovie';
 
-const Page = () => {
+const Page = (prop) => {
+  const URL = prop.url
+  const page = prop.page
+  const type = prop.type
   return (
-      <div className='tab-container'>
-        <div className="title">
-          Phim mới
-        </div>
-        <div className="list">
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-        </div>
-      </div>
+    <div className='tab-container'>
+      <ListMovie
+        url={URL}
+        page={page}
+        type={type}
+      />
+    </div>
   )
 }
 

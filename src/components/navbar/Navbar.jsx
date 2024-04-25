@@ -2,21 +2,27 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './navbar.scss'
 import { Search, Close, Menu } from '@mui/icons-material'
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 
 function Navbar() {
   const [showPage, setShowPage] = useState('');
-  const [showSearch, setShowSearch] = useState('');
-  const [showContainer, setShowContainer] = useState('');
   const [backgroundNav, setBackgroundNav] = useState('');
-  const showSearchHandle = () => {
-    if (showSearch === '') {
-      setShowSearch('search--active');
-      setShowContainer('nav__container--active');
-    } else {
-      setShowSearch('');
-      setShowContainer('');
+  const [close, setClose] = useState('')
+  const [keySearch, setKeySearch] = useState('')
+  
+  const handleClose = () => {
+    handleInput('')
+    setClose('')
+  }
+
+  const handleInput = (e) => {
+    console.log(e)
+    setKeySearch(e)
+    if (keySearch !== '') {
+      setClose('search-close-active')
     }
   }
+
   const showPageHandle = () => {
     if (showPage === '') {
       setShowPage('nav__list-active');
@@ -24,6 +30,7 @@ function Navbar() {
       setShowPage('');
     }
   }
+
   useEffect(() => {
     const backgroundNavHandle = () => {
       if (window.scrollY >= 60) {
@@ -34,50 +41,50 @@ function Navbar() {
     }
 
     window.addEventListener('scroll', backgroundNavHandle)
-
   }, [])
+
   return (
     <div className={`nav ${backgroundNav}`}>
-      <div className={`nav__container ${showContainer}`}>
+      <div className={`nav__container`}>
         <div className="nav__left">
+          <Menu onClick={showPageHandle} className='nav__menu'></Menu>
           <Link to='/'>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="logo" className='nav__logo'/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Iqiyi_Logo_Baru.png" alt="logo" className='nav__logo' />
           </Link>
           <div className={`nav__list ${showPage}`}>
             <ul className='nav__page'>
               <li className="nav__item">
                 <Link to='/' className='tab'>Trang chủ</Link>
-                </li>
-              <li className="nav__item">
-                <Link to='/tab' className='tab'>Phim mới</Link>
               </li>
               <li className="nav__item">
-                <Link to='/tab' className='tab'>Phim bộ</Link>
+                <Link to='phim-moi' className='tab'>Phim mới</Link>
               </li>
               <li className="nav__item">
-                <Link to='tab' className='tab'>Phim lẻ</Link>
+                <Link to='phim-bo' className='tab'>Phim bộ</Link>
               </li>
               <li className="nav__item">
-                <Link to='tab' className='tab'>Thể loại</Link>
-              </li>
-              <li className="nav__item">
-                <Link to='tab' className='tab'>Quốc gia</Link>
+                <Link to='phim-le' className='tab'>Phim lẻ</Link>
               </li>
             </ul>
             <Close onClick={showPageHandle} className='nav__close'></Close>
           </div>
         </div>
-        <div className="nav__actions">      
-            <div className="nav__actions__search">
-              <Search onClick={showSearchHandle} className='nav__actions__search__icon'></Search>
-            </div>
-            <Menu onClick={showPageHandle} className='nav__actions__menu'></Menu>
-        </div>
-      </div>
-      <div className={`search ${showSearch}`}>
-        <div className="search__box">
-          <input type="text" className="search__box__input" placeholder='Nhập tên phim'/>
-          <Close onClick={showSearchHandle} className='search__box__close'></Close>
+        <div className="nav__actions">
+          <div className="nav__search">
+            <input 
+              type="text" 
+              placeholder='Search...' 
+              className='input' 
+              value={keySearch}
+              onChange={(e) => handleInput(e.target.value)}
+            />
+            <div className="line"></div>
+            <CancelRoundedIcon 
+              className={`search-close ${close}`}
+              onClick={handleClose}
+            ></CancelRoundedIcon>
+            <Search className='nav__search-icon'></Search>
+          </div>
         </div>
       </div>
     </div>

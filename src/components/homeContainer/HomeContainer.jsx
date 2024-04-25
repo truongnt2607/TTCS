@@ -6,11 +6,31 @@ import './homeContainer.scss'
 const HomeContainer = () => {
   return (
     <div className='home-container'>
-      <Slider />
-      <Slider />
-      <ListMovie />
-      <ListMovie />
-      <ListMovie />
+      <Slider 
+        url='https://api.themoviedb.org/3/movie/now_playing'
+        page='2'
+        type='Đang chiếu'
+      />
+      <Slider 
+        url='https://api.themoviedb.org/3/movie/popular'
+        page='4'
+        type='Nổi tiếng'
+      />
+      <ListMovie 
+        url='https://api.themoviedb.org/3/movie/now_playing'
+        page='3'
+        type='Phim mới'
+      />
+      <ListMovie 
+        url='https://api.themoviedb.org/3/movie/now_playing'
+        page='4'
+        type='Phim bộ'
+      />
+      <ListMovie 
+        url='https://api.themoviedb.org/3/movie/now_playing'
+        page='5'
+        type='Phim lẻ'  
+      />
     </div>
   )
 }

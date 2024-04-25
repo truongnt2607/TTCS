@@ -1,13 +1,13 @@
 import React from 'react'
-import Suggest from '../components/suggest/Suggest'
 import HomeContainer from '../components/homeContainer/HomeContainer'
 import './home.scss'
+import Suggest from '../components/suggest/Suggest'
 
 const Home = () => {
   return (
       <div className='home'>
-        <Suggest className='suggest'/>
-        <HomeContainer className='main'></HomeContainer>
+        <Suggest />
+        <HomeContainer />
       </div>
   )
 }
