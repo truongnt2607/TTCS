@@ -7,29 +7,24 @@ const HomeContainer = () => {
   return (
     <div className='home-container'>
       <Slider 
-        url='https://api.themoviedb.org/3/movie/now_playing'
-        page='2'
-        type='Đang chiếu'
+        url='https://api.themoviedb.org/3/movie/popular'
+        type='Popular'
+        href='/tab/popular'
       />
       <Slider 
-        url='https://api.themoviedb.org/3/movie/popular'
-        page='4'
-        type='Nổi tiếng'
-      />
-      <ListMovie 
         url='https://api.themoviedb.org/3/movie/now_playing'
-        page='3'
-        type='Phim mới'
+        type='Now Playing'
+        href='/tab/now-playing'
       />
-      <ListMovie 
-        url='https://api.themoviedb.org/3/movie/now_playing'
-        page='4'
-        type='Phim bộ'
+      <Slider 
+        url='https://api.themoviedb.org/3/movie/upcoming'
+        type='Upcoming'
+        href='/tab/upcoming'
       />
-      <ListMovie 
-        url='https://api.themoviedb.org/3/movie/now_playing'
-        page='5'
-        type='Phim lẻ'  
+      <Slider 
+        url='https://api.themoviedb.org/3/movie/top_rated'
+        type='Top Rated'
+        href='/tab/top_rated'
       />
     </div>
   )

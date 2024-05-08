@@ -58,6 +58,24 @@
         }
 
     }
+
+    .pagination-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        gap: 10px;
+        .current-page {
+            font-size: 2.0rem;
+        }
+        .icon {
+            cursor: pointer;
+            font-size: 2.0rem;
+            &:hover {
+                color: var(--green);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1025px) {

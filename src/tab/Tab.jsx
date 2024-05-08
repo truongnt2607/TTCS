@@ -1,20 +1,31 @@
 import React from 'react'
 import './tab.scss';
 import ListMovie from '../components/listMovie/ListMovie';
+import { useParams } from 'react-router-dom';
 
-const Page = (prop) => {
-  const URL = prop.url
+const Tab = (prop) => {
+  let type = prop.type
+  let URL = prop.url
+  const handleKeyword = (string) => {
+    return string.keyword.replace('+', ' ')
+  }
+  const keyword = useParams()
+  if (keyword.keyword) {
+    URL += keyword.keyword + '&'
+    type = 'Tìm kiếm: ' + handleKeyword(keyword)
+  } else {
+    URL += '?'
+  }
+  //console.log(URL)
   const page = prop.page
-  const type = prop.type
   return (
     <div className='tab-container'>
       <ListMovie
         url={URL}
-        page={page}
-        type={type}
+        type={`${type}`}
       />
     </div>
   )
 }
 
-export default Page
+export default Tab

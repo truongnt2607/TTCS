@@ -9,6 +9,10 @@ function Navbar() {
   const [backgroundNav, setBackgroundNav] = useState('');
   const [close, setClose] = useState('')
   const [keySearch, setKeySearch] = useState('')
+
+  const handleKeyword = (keyword) => {
+    return keyword.replace(/\s/g, '+')
+  }
   
   const handleClose = () => {
     handleInput('')
@@ -16,7 +20,6 @@ function Navbar() {
   }
 
   const handleInput = (e) => {
-    console.log(e)
     setKeySearch(e)
     if (keySearch !== '') {
       setClose('search-close-active')
@@ -54,16 +57,19 @@ function Navbar() {
           <div className={`nav__list ${showPage}`}>
             <ul className='nav__page'>
               <li className="nav__item">
-                <Link to='/' className='tab'>Trang chủ</Link>
+                <Link to='/' className='tab'>Home</Link>
               </li>
               <li className="nav__item">
-                <Link to='phim-moi' className='tab'>Phim mới</Link>
+                <Link to='/tab/popular' className='tab'>Popular</Link>
               </li>
               <li className="nav__item">
-                <Link to='phim-bo' className='tab'>Phim bộ</Link>
+                <Link to='/tab/now-playing' className='tab'>Now Playing</Link>
               </li>
               <li className="nav__item">
-                <Link to='phim-le' className='tab'>Phim lẻ</Link>
+                <Link to='/tab/upcoming' className='tab'>Upcoming</Link>
+              </li>
+              <li className="nav__item">
+                <Link to='/tab/top-rated' className='tab'>Top Rated</Link>
               </li>
             </ul>
             <Close onClick={showPageHandle} className='nav__close'></Close>
@@ -83,7 +89,9 @@ function Navbar() {
               className={`search-close ${close}`}
               onClick={handleClose}
             ></CancelRoundedIcon>
-            <Search className='nav__search-icon'></Search>
+            <Link to={`/tab/${handleKeyword(keySearch)}`}  className='nav__search-icon'>
+              <Search className='search-icon'></Search>
+            </Link>
           </div>
         </div>
       </div>

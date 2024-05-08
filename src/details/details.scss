@@ -1,6 +1,84 @@
 .details-container {
     width: 100%;
-    height: 100vh;
-    padding-top: 80px;
+    //padding-top: 80px;
     background-color: var(--dark);
+    font-size: 1.4rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+
+    .top {
+        display: flex;
+        width: 100%;
+
+        .content {
+            padding-top: 130px;
+            flex: 1;
+            position: unset;
+            margin-left: 60px;
+        }
+
+        .bg-wapper {
+            flex: 2;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(270deg, rgba(17, 19, 25, 0) 0%, rgba(17, 19, 25, 0.05) 16%, rgba(17, 19, 25, 0.2) 30%, rgba(17, 19, 25, 0.39) 43%, rgba(17, 19, 25, 0.61) 55%, rgba(17, 19, 25, 0.8) 68%, rgba(17, 19, 25, 0.95) 82%, rgb(17, 19, 25) 98%);
+                position: absolute;
+                z-index: 3;
+            }
+        }
+    }
+
+    .watch {
+        padding: 50px 0;
+        margin-top: -200px;
+        z-index: 99;
+        position: relative;
+        .actor-title {
+            margin-left: 60px;
+            font-size: 3.6rem;
+            margin-bottom: 20px;
+        }
+
+        .actor {
+            display: flex;
+            gap: 8px;
+            margin-left: 60px;
+            margin-bottom: 50px;
+            overflow: auto;
+            .actor-wapper {
+                width: 100%;
+                background-color: var(--opa);
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                //border-radius: 4px;
+
+                .img-actor {
+                    width: 200px;
+                    object-fit: cover;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+
+                .name-actor {
+                    margin-top: 6px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .player {
+            margin: 0 auto;
+        }
+    }
 }

@@ -35,9 +35,24 @@
         right: 2%;
     }
 
-    .type-list {
-        font-size: 3.2rem;
-        margin-bottom: 20px;
+    .header-slider {
+        display: flex;
+        position: relative;
+        .type-list {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+        }
+        .watch-more {
+            position: absolute;
+            right: 0;
+            bottom: 8px;
+            font-size: 1.6rem;
+            color: var(--white);
+            text-decoration: none;
+            &:hover {
+                color: var(--green);
+            }
+        }
     }
 
     .wapper-img {
