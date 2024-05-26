@@ -88,7 +88,7 @@ function Navbar() {
             <CancelRoundedIcon 
               className={`search-close ${close}`}
               onClick={handleClose}
-            ></CancelRoundedIcon>
+            />
             <Link to={`/tab/${handleKeyword(keySearch)}`}  className='nav__search-icon'>
               <Search className='search-icon'></Search>
             </Link>

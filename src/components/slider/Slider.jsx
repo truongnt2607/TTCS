@@ -72,18 +72,21 @@ const Slider = (prop) => {
           }}
         >
           {
-            movies.map((movie, index) =>
-              <SplideSlide key={index}>
-                <Link to={`/details/${movie.id}`}>
-                  <div className='wapper-img'>
-                    {/* <img src={movie} alt="" className="item-img" /> */}
-                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" className="item-img" />
-                    <div className='item-status'>Full HD</div>
-                  </div>
-                </Link>
-                <div className="item-title">{movie.title}</div>
-              </SplideSlide>
-            )
+            movies.map((movie, index) => {
+              if (movie.poster_path)
+                return (
+                  <SplideSlide key={index}>
+                    <Link to={`/details/${movie.id}`}>
+                      <div className='wapper-img'>
+                        {/* <img src={movie} alt="" className="item-img" /> */}
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" className="item-img" />
+                        <div className='item-status'>Full HD</div>
+                      </div>
+                    </Link>
+                    <div className="item-title">{movie.title}</div>
+                  </SplideSlide>
+                )
+            })
           }
         </Splide>
       </section>

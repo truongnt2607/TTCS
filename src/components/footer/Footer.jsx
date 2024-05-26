@@ -1,12 +1,13 @@
 import React from 'react'
 import './footer.scss'
+import { Link } from 'react-router-dom'
 
 const footer = () => {
   return (
     <div className='footer-container'>
       <div className="intro col">
         Giới thiệu
-        <a className='footer-item'>Trang chủ</a>
+        <Link to="/" className='footer-item'>Trang chủ</Link>
         <a className='footer-item copyright'>Copyright <i className="fa-regular fa-copyright"></i> 2024 by NTT</a>
       </div>
       <div className="contact col">

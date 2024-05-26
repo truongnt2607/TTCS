@@ -3,6 +3,7 @@
     //padding-top: 80px;
     background-color: var(--dark);
     font-size: 1.4rem;
+    font-weight: 700;
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -16,6 +17,7 @@
             flex: 1;
             position: unset;
             margin-left: 60px;
+            display: block;
         }
 
         .bg-wapper {
@@ -57,7 +59,7 @@
             margin-bottom: 50px;
             overflow: auto;
             .actor-wapper {
-                width: 100%;
+                //width: 100%;
                 background-color: var(--opa);
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
