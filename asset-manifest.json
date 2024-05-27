@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TTCS/static/css/main.2394ad9a.css",
+    "main.css": "/TTCS/static/css/main.1edc6d4e.css",
     "main.js": "/TTCS/static/js/main.825bd128.js",
     "reactPlayerYouTube.js": "/TTCS/static/js/reactPlayerYouTube.ceda7deb.chunk.js",
     "reactPlayerSoundCloud.js": "/TTCS/static/js/reactPlayerSoundCloud.ed3d3c32.chunk.js",
@@ -17,7 +17,7 @@
     "reactPlayerFilePlayer.js": "/TTCS/static/js/reactPlayerFilePlayer.f7df6bb1.chunk.js",
     "reactPlayerPreview.js": "/TTCS/static/js/reactPlayerPreview.0c8efc89.chunk.js",
     "index.html": "/TTCS/index.html",
-    "main.2394ad9a.css.map": "/TTCS/static/css/main.2394ad9a.css.map",
+    "main.1edc6d4e.css.map": "/TTCS/static/css/main.1edc6d4e.css.map",
     "main.825bd128.js.map": "/TTCS/static/js/main.825bd128.js.map",
     "reactPlayerYouTube.ceda7deb.chunk.js.map": "/TTCS/static/js/reactPlayerYouTube.ceda7deb.chunk.js.map",
     "reactPlayerSoundCloud.ed3d3c32.chunk.js.map": "/TTCS/static/js/reactPlayerSoundCloud.ed3d3c32.chunk.js.map",
@@ -35,7 +35,7 @@
     "reactPlayerPreview.0c8efc89.chunk.js.map": "/TTCS/static/js/reactPlayerPreview.0c8efc89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2394ad9a.css",
+    "static/css/main.1edc6d4e.css",
     "static/js/main.825bd128.js"
   ]
 }
