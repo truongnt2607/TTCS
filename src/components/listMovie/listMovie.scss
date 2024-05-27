@@ -17,13 +17,12 @@
 
         .list-item {
             width: calc((100% - 20px*5)/6);
-            height: 500px;
+            height: auto;
             margin-bottom: 80px;
             transform: scale(1);
             transition: 0.5s ease-in-out;
 
             .wapper-img {
-                height: 100%;
                 position: relative;
 
                 .item-img {
@@ -65,12 +64,15 @@
         justify-content: center;
         color: var(--white);
         gap: 10px;
+
         .current-page {
             font-size: 2.0rem;
         }
+
         .icon {
             cursor: pointer;
             font-size: 2.0rem;
+
             &:hover {
                 color: var(--green);
             }
@@ -80,14 +82,13 @@
 
 @media screen and (max-width: 1025px) {
     .list-container {
-        margin: 0 20px;
+        // margin: 0 20px;
 
         .list-wapper {
-            gap: 10px;
 
             .list-item {
                 width: calc((100% - 20px*3)/4);
-                height: 350px;
+                height: auto;
 
                 .item-img {
                     object-fit: scale-down;
@@ -101,8 +102,12 @@
     .list-container {
         .list-wapper {
             .list-item {
-                width: calc((100% - 20px*1)/2);
-                height: 500px;
+                width: calc((100% - 20px*2)/3);
+                height: auto;
+
+                .item-img {
+                    object-fit: scale-down;
+                }
             }
         }
     }
@@ -113,7 +118,11 @@
         .list-wapper {
             .list-item {
                 width: calc((100% - 20px*2)/3);
-                height: 150px;
+                height: auto;
+
+                .item-img {
+                    object-fit: scale-down;
+                }
             }
         }
     }
