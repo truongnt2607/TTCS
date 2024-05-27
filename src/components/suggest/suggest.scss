@@ -81,7 +81,6 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .suggest {
-
         .splide {
             .splide__slide {
                 .suggest-img {
@@ -100,7 +99,7 @@
 
 @media screen and (max-width: 768px) {
     .suggest {
-
+        margin-top: 60px;
         .splide {
             .splide__slide {
                 // height: 36vh;
