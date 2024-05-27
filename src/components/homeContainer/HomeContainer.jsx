@@ -9,22 +9,22 @@ const HomeContainer = () => {
       <Slider 
         url='https://api.themoviedb.org/3/movie/popular'
         type='Popular'
-        href='/tab/popular'
+        href='/TTCS/tab/popular'
       />
       <Slider 
         url='https://api.themoviedb.org/3/movie/now_playing'
         type='Now Playing'
-        href='/tab/now-playing'
+        href='/TTCS/tab/now-playing'
       />
       <Slider 
         url='https://api.themoviedb.org/3/movie/upcoming'
         type='Upcoming'
-        href='/tab/upcoming'
+        href='/TTCS/tab/upcoming'
       />
       <Slider 
         url='https://api.themoviedb.org/3/movie/top_rated'
         type='Top Rated'
-        href='/tab/top_rated'
+        href='/TTCS/tab/top_rated'
       />
     </div>
   )
