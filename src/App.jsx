@@ -11,38 +11,39 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route path='' element={<Home />} />
-        <Route path='tab/popular'
+        <Route path='/TTCS' element={<Home />} />
+        <Route path='/TTCS/tab/popular'
           element={<Tab
             url='https://api.themoviedb.org/3/movie/popular'
             type='Popular'
           />}
         />
-        <Route path='tab/now-playing'
+        <Route path='/TTCS/tab/now-playing'
           element={<Tab
             url='https://api.themoviedb.org/3/movie/now_playing'
             type='Now Playing'
           />}
         />
-        <Route path='tab/upcoming'
+        <Route path='/TTCS/tab/upcoming'
           element={<Tab
             url='https://api.themoviedb.org/3/movie/upcoming'
             type='Upcoming'
           />}
         />
-        <Route path='tab/top-rated'
+        <Route path='/TTCS/tab/top-rated'
           element={<Tab
             url='https://api.themoviedb.org/3/movie/top_rated'
             type='Top Rated'
           />}
         />
-        <Route path='tab/:keyword'
+        <Route path='/TTCS/tab/:keyword'
           element={<Tab
             url='https://api.themoviedb.org/3/search/movie?query='
             type='Tìm kiếm phim: '
           />}
         />
-        <Route path='details/:idMovie' element={<Details />} />
+        <Route path='/TTCS/details/:idMovie' element={<Details />} />
+
       </Routes>
       <Footer />
     </div>

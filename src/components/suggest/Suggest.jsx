@@ -29,7 +29,7 @@ const Suggest = () => {
           movies.map((movie, index) =>
 
             < SplideSlide key={index}>
-              <Link to={`/details/${movie.id}`} className='suggest-img'>
+              <Link to={`/TTCS/details/${movie.id}`} className='suggest-img'>
                 <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="" className='background-img' />
               </Link>
               <Info

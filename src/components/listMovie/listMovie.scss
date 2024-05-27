@@ -3,6 +3,10 @@
     margin: 0 auto;
     padding-bottom: 50px;
 
+    a {
+        text-decoration: none;
+    }
+
     .list-title {
         color: var(--white);
         font-size: 32px;

@@ -51,25 +51,25 @@ function Navbar() {
       <div className={`nav__container`}>
         <div className="nav__left">
           <Menu onClick={showPageHandle} className='nav__menu'></Menu>
-          <Link to='/'>
+          <Link to='/TTCS'>
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Iqiyi_Logo_Baru.png" alt="logo" className='nav__logo' />
           </Link>
           <div className={`nav__list ${showPage}`}>
             <ul className='nav__page'>
               <li className="nav__item">
-                <Link to='/' className='tab'>Home</Link>
+                <Link to='/TTCS' className='tab'>Home</Link>
               </li>
               <li className="nav__item">
-                <Link to='/tab/popular' className='tab'>Popular</Link>
+                <Link to='/TTCS/tab/popular' className='tab'>Popular</Link>
               </li>
               <li className="nav__item">
-                <Link to='/tab/now-playing' className='tab'>Now Playing</Link>
+                <Link to='/TTCS/tab/now-playing' className='tab'>Now Playing</Link>
               </li>
               <li className="nav__item">
-                <Link to='/tab/upcoming' className='tab'>Upcoming</Link>
+                <Link to='/TTCS/tab/upcoming' className='tab'>Upcoming</Link>
               </li>
               <li className="nav__item">
-                <Link to='/tab/top-rated' className='tab'>Top Rated</Link>
+                <Link to='/TTCS/tab/top-rated' className='tab'>Top Rated</Link>
               </li>
             </ul>
             <Close onClick={showPageHandle} className='nav__close'></Close>
@@ -89,7 +89,7 @@ function Navbar() {
               className={`search-close ${close}`}
               onClick={handleClose}
             />
-            <Link to={`/tab/${handleKeyword(keySearch)}`}  className='nav__search-icon'>
+            <Link to={`/TTCS/tab/${handleKeyword(keySearch)}`}  className='nav__search-icon'>
               <Search className='search-icon'></Search>
             </Link>
           </div>

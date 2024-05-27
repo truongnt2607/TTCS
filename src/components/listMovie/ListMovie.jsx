@@ -41,7 +41,7 @@ const ListMovie = (prop) => {
       <div className="list-wapper">
         {
           movies.map((movie, index) => 
-            <Link to={`/details/${movie.id}`} className="list-item" key={index}>
+            <Link to={`/TTCS/details/${movie.id}`} className="list-item" key={index}>
               <div className="wapper-img">
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" className="item-img" />
                 {/* <img src={movie} alt="" className="item-img" /> */}
