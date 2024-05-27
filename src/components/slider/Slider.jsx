@@ -76,7 +76,7 @@ const Slider = (prop) => {
               if (movie.poster_path)
                 return (
                   <SplideSlide key={index}>
-                    <Link to={`/details/${movie.id}`}>
+                    <Link to={`/TTCS/details/${movie.id}`}>
                       <div className='wapper-img'>
                         {/* <img src={movie} alt="" className="item-img" /> */}
                         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" className="item-img" />

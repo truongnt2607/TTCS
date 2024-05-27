@@ -41,10 +41,10 @@ const Details = () => {
   return (
     <div className='details-container'>
       <div className="top">
-        <Info details={movie} className='content' />
         <div className="bg-wapper">
-          <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="" className='bg' />
+          <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="" className='bg' />
         </div>
+        <Info details={movie} className='content' />
       </div>
       <div className="watch">
         <div className="actor-title">Actor</div>
@@ -65,11 +65,11 @@ const Details = () => {
           url={`https://www.youtube.com/watch?v=${keyYoutube}`}
           controls={true}
           className='player'
-          width='1440px'
-          height='810px'
+          width='85vw'
+          height='calc(85vw / 16 * 8)'
         />
       </div>
-      <Slider 
+      <Slider
         url={`https://api.themoviedb.org/3/movie/${idMovie}/similar`}
         type='Similar'
       />
