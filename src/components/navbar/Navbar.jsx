@@ -90,7 +90,7 @@ function Navbar() {
               onClick={handleClose}
             />
             <Link to={`/TTCS/tab/${handleKeyword(keySearch)}`}  className='nav__search-icon'>
-              <Search className='search-icon'></Search>
+              <Search className='search-icon' onClick={e => setKeySearch('')}></Search>
             </Link>
           </div>
         </div>
