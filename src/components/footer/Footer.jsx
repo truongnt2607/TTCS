@@ -12,7 +12,7 @@ const footer = () => {
       </div>
       <div className="contact col">
         Hợp tác
-        <a className='footer-item'>Đăng quảng cáo</a>
+        <a className='footer-item'>Đăng quảng cáo SS</a>
         <a className='footer-item'>Thông tin</a>
       </div>
       <div className="help col">
